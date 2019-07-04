@@ -1,0 +1,293 @@
+section {
+  .sec {
+    &-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      h1 {
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 70px;
+          height: 5px;
+          background-color: $border-color;
+          margin: auto;
+        }
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &#bannerSlide {
+    .carousel {
+      &-item {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(black, 0.5);
+        }
+      }
+      &-caption {
+        top: 50%;
+        bottom: unset;
+        transform: translateY(-50%);
+        @include media-breakpoint-down(sm) {
+          * {
+            transform: scale(0.6) !important;
+          }
+        }
+      }
+    }
+  }
+  &#ourServices {
+    padding: 4rem 0;
+    .services {
+      display: block;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      &:hover {
+        h4 {
+          &::before {
+            width: 80px;
+            background-color: $primary;
+            @include transition($transition-base);
+          }
+        }
+        .services {
+          &-text {
+            color: $primary;
+            @include transition($transition-base);
+          }
+        }
+      }
+      &-icon {
+        margin-bottom: 0.5rem;
+      }
+      h4 {
+        color: $primary;
+        position: relative;
+        padding-bottom: 0.25rem;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 0px;
+          height: 2px;
+          background-color: transparent;
+          @include transition($transition-base);
+        }
+      }
+      &-text {
+        color: $body-color;
+        @include transition($transition-base);
+      }
+      &-left {
+        @include media-breakpoint-up(lg) {
+          text-align: left;
+          h4 {
+            &::before {
+              right: auto;
+            }
+          }
+        }
+      }
+      &-right {
+        @include media-breakpoint-up(lg) {
+          text-align: right;
+          h4 {
+            &::before {
+              left: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &#preform {
+    background-color: $gray-200;
+    padding: 1.5rem 0;
+    .preform {
+      text-align: center;
+      margin: 2.5rem 0;
+      @include media-breakpoint-up(lg) {
+        display: flex;
+        align-items: center;
+        &-icon {
+          margin-right: 1rem;
+        }
+        &-number {
+          @include rfs(48);
+          margin-bottom: 0;
+        }
+        &-text {
+          @include rfs(24);
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &#teacher {
+    padding: 4rem 0;
+    .card {
+      border-radius: 0;
+      border-width: 0;
+      box-shadow: $box-shadow-sm;
+      height: calc(100% - 2.5rem);
+      margin-bottom: 2.5rem;
+      @include transition($transition-base);
+      &:hover {
+        box-shadow: $box-shadow;
+        @include transition($transition-base);
+        .card-name {
+          color: $primary;
+          @include transition($transition-base);
+        }
+      }
+      &-img {
+        position: relative;
+        border-radius: 0;
+        img {
+          width: 100%;
+        }
+      }
+      &-tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.25rem 1.25rem;
+        border-radius: 10rem;
+        background-color: white;
+        color: $body-color;
+        font-size: small;
+        box-shadow: $box-shadow-sm;
+      }
+      &-body {
+        padding: 0.5rem;
+      }
+      &-name {
+        color: $body-color;
+        @include transition($transition-base);
+      }
+      &-position {
+        margin-bottom: 0;
+        color: $text-muted;
+        font-size: small;
+      }
+    }
+  }
+
+  &#review {
+    background-color: $gray-200;
+    padding: 4rem 0;
+    .review {
+      &-item {
+        text-align: center;
+        &:focus {
+          outline: none;
+        }
+      }
+      &-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 100%;
+        margin: auto;
+        margin-bottom: 1rem;
+        box-shadow: $box-shadow-sm;
+      }
+      &-position {
+        color: $primary;
+      }
+      &-text {
+        font-style: italic;
+      }
+    }
+  }
+
+  &#course {
+    padding: 4rem 0 1.5rem;
+    .card {
+      border-width: 0;
+      border-radius: 0;
+      box-shadow: $box-shadow-sm;
+      height: calc(100% - 2.5rem);
+      margin-bottom: 2.5rem;
+      @include transition($transition-base);
+      &:hover {
+        box-shadow: $box-shadow;
+        @include transition($transition-base);
+        .card-title {
+          color: $primary;
+          @include transition($transition-base);
+        }
+      }
+      &-img {
+        position: relative;
+        border-radius: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 50%;
+          @include gradient-y(
+            $start-color: rgba(black, 0),
+            $end-color: rgba(black, 0.5),
+            $start-percent: 0%,
+            $end-percent: 100%
+          );
+        }
+        img {
+          width: 100%;
+        }
+      }
+      &-caption {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        font-size: small;
+        color: white;
+      }
+      &-body {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+      }
+      &-logo {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-right: 1rem;
+      }
+      &-type {
+        font-size: small;
+        color: $text-muted;
+      }
+      &-title {
+        color: $body-color;
+        margin-bottom: 0;
+        @include transition($transition-base);
+      }
+    }
+  }
+}
