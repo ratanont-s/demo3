@@ -1,10 +1,13 @@
 $enable-responsive-font-sizes: true;
-$font-family-base: "Kanit", sans-serif;
+$font-family-base: "Kanit",
+sans-serif;
 
 // Slick
 $slick-font-path: "../scss/slick/fonts/";
 $slick-loader-path: "../scss/slick/";
 $slick-dot-size: 1rem;
+$slick-arrow-color: black;
+$slick-opacity-not-active: .25;
 
 // Link
 $link-hover-decoration: none;
