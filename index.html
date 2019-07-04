@@ -24,7 +24,17 @@
                     <li><a href="mailto:example@mail.com"><i class="far fa-envelope"></i> example@mail.com</a></li>
                 </ul>
                 <ul>
-                    <li><i class="fas fa-search"></i></li>
+                    <li>
+                        <a href="javascript:void(0);" id="toggleSearch"><i class="fas fa-search"></i></a>
+                        <form action="#" class="input-group input-group-sm" id="formSearch">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </li>
                     <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="dropdown dropdown-language">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -73,6 +83,25 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <div class="form-row">
+                                <div class="col-auto">
+                                    <a href="https://www.facebook.com/" target="_blank" class="btn btn-primary">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <form action="#" class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search...">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -511,9 +540,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>

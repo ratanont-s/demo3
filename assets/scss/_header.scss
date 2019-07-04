@@ -8,12 +8,14 @@ header {
   box-shadow: $box-shadow-sm;
   .header {
     &-top {
+      height: 47px;
       background-color: black;
       padding: 0.5rem 0;
       > .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 100%;
       }
       ul {
         list-style: none;
@@ -92,6 +94,17 @@ header {
         &:hover {
           background-color: $body-color;
         }
+      }
+    }
+  }
+  .input-group {
+    .form-control {
+      border-radius: 0;
+    }
+    &-append {
+      border-radius: 0;
+      .btn {
+        border-radius: 0 !important;
       }
     }
   }
