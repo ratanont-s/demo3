@@ -6,5 +6,6 @@
     }],
     "liveSassCompile.settings.includeItems": [
         "assets/scss/style.scss"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
