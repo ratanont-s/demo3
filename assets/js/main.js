@@ -27,7 +27,7 @@ $(function() {
   $("#bannerSlide .banner").slick({
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     dots: true,
     responsive: [
       {
