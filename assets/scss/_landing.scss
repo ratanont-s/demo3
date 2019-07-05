@@ -30,6 +30,101 @@ section {
   }
 
   &#bannerSlide {
+    .carousel {
+      &-img {
+        width: 100%;
+        &-dt {
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+        &-mb {
+          @include media-breakpoint-up(lg) {
+            display: none;
+          }
+        }
+        @include media-breakpoint-down(md) {
+          height: 75vh;
+          object-fit: cover;
+        }
+      }
+      &-item {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(black, 0.5);
+          z-index: 1;
+        }
+      }
+      &-caption {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        max-width: 1140px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin: auto;
+        text-align: center;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        color: white;
+        z-index: 2;
+
+        h4 {
+          font-weight: 300;
+        }
+
+        hr {
+          width: 100px;
+          height: 4px;
+          background-color: white;
+        }
+
+        .btn {
+          margin-top: 2rem;
+          border-radius: 10rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+      &-indicators li {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-top: 0;
+        border-bottom: 0;
+        border-radius: 10rem;
+      }
+      &-control-prev,
+      &-control-next {
+        display: none;
+      }
+      &-control-prev {
+        &-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 10rem;
+          background-size: 50%;
+          background-color: rgba(black, 0.25);
+        }
+      }
+      &-control-next {
+        &-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 10rem;
+          background-size: 50%;
+          background-color: rgba(black, 0.25);
+        }
+      }
+    }
     .banner {
       .slick {
         &-arrow {

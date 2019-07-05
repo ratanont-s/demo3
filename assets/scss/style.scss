@@ -8,3 +8,12 @@
 @import "./footer";
 @import "./loading";
 @import "./landing";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}

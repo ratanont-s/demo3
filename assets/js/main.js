@@ -7,36 +7,8 @@ $(function() {
   });
 
   // Banner slide
-  $("#bannerSlide .banner").on("init", function(e, slick) {
-    var $firstAnimatingElements = $("div.banner-item:first-child").find(
-      "[data-animation]"
-    );
-    doAnimations($firstAnimatingElements);
-  });
-  $("#bannerSlide .banner").on("beforeChange", function(
-    e,
-    slick,
-    currentSlide,
-    nextSlide
-  ) {
-    var $animatingElements = $(
-      'div.banner-item[data-slick-index="' + nextSlide + '"]'
-    ).find("[data-animation]");
-    doAnimations($animatingElements);
-  });
-  $("#bannerSlide .banner").slick({
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          arrows: false
-        }
-      }
-    ]
+  $("#banner.carousel").carousel({
+    interval: 8000
   });
 
   function doAnimations(elements) {
